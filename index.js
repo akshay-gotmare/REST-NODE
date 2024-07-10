@@ -6,7 +6,24 @@ const { json } = require("body-parser");
 
 const app = express();
 
+// Middlewares
 app.use(express.urlencoded({ extended: false }));
+
+app.use((req, res, next) => {
+  console.log("Inside Middelware 1");
+  fs.appendFile(
+    "log.txt",
+    `\n${Date.now()} : ${req.ip} : ${req.method} : ${req.path}`,
+    (err, data) => {
+      next();
+    }
+  );
+});
+
+app.use((req, res, next) => {
+  console.log("Inside Middleware 2");
+  next();
+});
 
 app.get("/api/users", (req, res) => {
   return res.json(users);
@@ -52,21 +69,6 @@ app.post("/api/users", (req, res) => {
     return res.json({ status: "Success", id: users.length });
   });
 });
-
-// app.get("/api/users/:id", (req, res) => {
-//   const id = Number(req.params.id);
-//   const user = users.find((user) => user.id === id);
-//   console.log("Hello");
-//   return res.json(user);
-// });
-// app.patch("/api/users/:id", (req, res) => {
-//   const id = req.params.id;
-//   res.json({ status: "Pending..." });
-// });
-// app.delete("/api/users/:id", (req, res) => {
-//   const id = req.params.id;
-//   res.json({ status: "Pending..." });
-// });
 
 app.listen(PORT, () => {
   console.log(`Server listening at PORT ${PORT}`);
