@@ -56,3 +56,10 @@
 1720629074946 : ::1 : GET : /api/users/
 1720629089263 : ::1 : DELETE : /api/users/668ea36f22d9b09167be8a02
 1720629095971 : ::1 : GET : /api/users/
+1720634478247 : ::1 : GET : /api/users/
+1720634487238 : ::1 : GET : /api/users/668ea2720249731d980af58a
+1720634500112 : ::1 : PATCH : /api/users/668ea2720249731d980af58a
+1720634508598 : ::1 : GET : /api/users/668ea2720249731d980af58a
+1720634525904 : ::1 : POST : /api/users/
+1720634541514 : ::1 : GET : /api/users/668ecc9d9975808769ff81da
+1720634545608 : ::1 : GET : /api/users/
