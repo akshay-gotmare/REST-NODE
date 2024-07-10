@@ -1,0 +1,22 @@
+{
+  "name": "node-rest-api-project",
+  "version": "1.0.0",
+  "description": "Node Rest API Project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akshay-gotmare/REST-NODE.git"
+  },
+  "author": "Akshay Gotmare",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akshay-gotmare/REST-NODE/issues"
+  },
+  "homepage": "https://github.com/akshay-gotmare/REST-NODE#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
